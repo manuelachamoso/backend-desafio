@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a MEAN (MongoDB, Express, Angular, Node.js) stack application developed as a part of a job interview challenge for Plugcore. It consists of a backend API built with Node.js and Express, using MongoDB as the database, and a frontend application developed with Angular. 
+This project is a MEAN (MongoDB, Express, Angular, Node.js) stack application developed as a part of a job interview challenge. It consists of a backend API built with Node.js and Express, using MongoDB as the database, and a frontend application developed with Angular. 
 
 The backend API provides endpoints to perform CRUD (Create, Read, Update, Delete) operations on user data. It includes features such as creating a new user, retrieving user information, updating user details, and deleting a user. The API utilizes the Express framework for handling HTTP requests and connects to a MongoDB database to store and retrieve user data.
 
