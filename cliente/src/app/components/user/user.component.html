@@ -1,0 +1,33 @@
+<div class="main-container">
+        <div class="container-card">
+          <div class="container-card-body">
+            <span id="title">Usuarios Plugcore</span>
+            <button class="submit-btn" routerLink="/create">Crear Usuario</button>
+            <div class="table-container">
+            <table *ngIf= "usersList.length > 0" class="table">
+              <thead>
+                <tr>
+                  <th>ID de Usuario</th>
+                  <th>Nombre</th>
+                  <th>Fecha de Creación</th>
+                  <th>Fecha de Actualización</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor = "let user of usersList">
+                  <td>{{ user.userId }}</td>
+                  <td>{{ user.name }}</td>
+                  <td>{{ user.createDate | date: 'dd/MM/yyyy' }}</td>
+                  <td>{{ user.updateDate | date: 'dd/MM/yyyy' }}</td>
+                  <td class="modify">
+                    <i [routerLink] = "['/editar/', user.userId]" class="fa-solid fa-user-pen" id="edit"></i>
+                    <i (click)="eliminarUsers(user.userId)" class="fas fa-trash" id="delete"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+            <h5 class="error-message" *ngIf= "usersList.length == 0">No hay usuarios para mostrar</h5>
+          </div>
+        </div>
+  </div>

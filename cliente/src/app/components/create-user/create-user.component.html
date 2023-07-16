@@ -1,0 +1,25 @@
+<div class="main-container">
+    <div class="container-card">
+        <div class="container-card-body ">
+            <span id="title">{{ titulo }}</span>
+            <form class="form" [formGroup] = "userForm" (ngSubmit)="crearUsuario()">
+                <div class="input-id">
+                    <input type="text" class="form-control form-control-lg" placeholder="Id automatically generated" formControlName="userId">
+                </div>
+                <div class="input-name">
+                    <input type="text" class="form-control form-control-lg" placeholder="Nombre" formControlName="name">
+                </div>
+                <div class="error-message"
+                *ngIf="userForm?.get('name')?.hasError('required') && userForm?.get('name')?.touched">
+                    <span>El nombre del usuario <strong>es obligatorio</strong></span>
+                </div>
+                <div class="buttons-submit">
+                    <button routerLink="/" class="back-btn">Volver</button>
+                    <button type="submit" 
+                    [disabled]="userForm.invalid"
+                    class="submit-btn">Aceptar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

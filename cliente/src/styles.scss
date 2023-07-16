@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #00C9FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.submit-btn {
+    background-color: darkgreen;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: rgb(3, 59, 3);
+}
+
+.error-message {
+    text-align: center;
+    color: darkred;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    font-size: 12px;
+}
